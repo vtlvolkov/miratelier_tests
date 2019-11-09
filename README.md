@@ -1,4 +1,4 @@
-# HomeBeatLive automated tests
+# Miratelier automated tests
 
 This set of testes covers the most basic functionality to run on daily basis or after any new commit
 
@@ -13,22 +13,7 @@ This set of testes covers the most basic functionality to run on daily basis or 
 <suite name="SmokeTest">
     <test name="Login" preserve-order="true">
         <classes>
-            <class name="TestLogin"/>
-        </classes>
-    </test>
-    <test name="Links" preserve-order="true">
-        <classes>
-            <class name="TestLinksClick"/>
-        </classes>
-    </test>
-    <test name="Emergency" preserve-order="true">
-        <classes>
-            <class name="TestReportEmergency"/>
-        </classes>
-    </test>
-    <test name="Apartments" preserve-order="true">
-        <classes>
-            <class name="TestAddApartments"/>
+            <class name="OpenPagesTest"/>
         </classes>
     </test>
 </suite>
