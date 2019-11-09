@@ -1,0 +1,5 @@
+build:
+  script:
+  - "mvn clean test site"
+  - "sudo rm -rf /var/www/html/hbl-report.com/alpha/*i"
+  - "sudo cp -a target/site/* /var/www/html/hbl-report.com/alpha/"

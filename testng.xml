@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SmokeTest">
+    <test name="Emails" preserve-order="true">
+        <classes>
+            <class name="com.selenide.test.tests.OpenPagesTest"/>
+        </classes>
+    </test>
+</suite>
