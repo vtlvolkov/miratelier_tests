@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import io.restassured.RestAssured;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -51,7 +52,22 @@ public class BaseConfigs extends ScreenshotListener {
     System.setProperty("webdriver.chrome.driver", chromedriver.getPath());
 
     ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.addArguments("--headless", "window-size=1440,900", "--no-sandbox");
+    chromeOptions.addArguments("--no-sandbox");
+    chromeOptions.addArguments("--disable-dev-shm-usage");
+    chromeOptions.addArguments("--aggressive-cache-discard");
+    chromeOptions.addArguments("--disable-cache");
+    chromeOptions.addArguments("--disable-application-cache");
+    chromeOptions.addArguments("--disable-offline-load-stale-cache");
+    chromeOptions.addArguments("--disk-cache-size=0");
+    chromeOptions.addArguments("--headless");
+    chromeOptions.addArguments("--disable-gpu");
+    chromeOptions.addArguments("--dns-prefetch-disable");
+    chromeOptions.addArguments("--no-proxy-server");
+    chromeOptions.addArguments("--log-level=3");
+    chromeOptions.addArguments("--silent");
+    chromeOptions.addArguments("--disable-browser-side-navigation");
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+    chromeOptions.setProxy(null);
     WebDriver webDriver = new ChromeDriver( chromeOptions );
     WebDriverRunner.setWebDriver(webDriver);
 

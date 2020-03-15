@@ -69,14 +69,14 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.0.0</version>
+            <version>7.1.0</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>5.5.0</version>
+            <version>5.9.0</version>
             <scope>test</scope>
         </dependency>
 
